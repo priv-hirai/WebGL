@@ -1,8 +1,8 @@
 {
-	"name": "r3f_homunculus",
+	"name": "priv-webgl",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://nemutas.github.io/r3f-homunculus/",
+	"homepage": "./",
 	"dependencies": {
 		"@react-three/drei": "^8.3.1",
 		"@react-three/fiber": "^7.0.24",
