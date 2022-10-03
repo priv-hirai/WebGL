@@ -1,7 +1,9 @@
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom'
+import { Suspense } from 'react'
 import { Logo } from '@pmndrs/branding'
 import './styles.css'
-import App from './App'
+import { App } from './App'
+import Hello from './hello'
 
 function Overlay() {
   return (
@@ -11,16 +13,20 @@ function Overlay() {
         <br />
         dev collective
       </a>
-      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>good —</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/15/2021</div>
+      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>bad —</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/17/2021</div>
     </div>
   )
 }
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <>
-    <App />
+    <Suspense fallback={null}>
+      <Hello />
+      <App />
+    </Suspense>
     <Overlay />
     <Logo style={{ position: 'absolute', bottom: 40, left: 40, width: 30 }} />
-  </>
+  </>,
+  document.getElementById('root')
 )
