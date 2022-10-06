@@ -2,6 +2,8 @@
   "name": "horizontal-tiles",
   "version": "1.0.0",
   "description": "Horizontal scrollcontrols with expanding tiles.",
+  "homepage": "./",
+  "private": true,
   "keywords": [
     "expand",
     "scrollcontrols",
