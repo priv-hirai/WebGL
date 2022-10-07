@@ -1,5 +1,4 @@
 @import url("https://rsms.me/inter/inter.css");
-
 * {
   box-sizing: border-box;
 }
@@ -17,8 +16,6 @@ body {
   overscroll-behavior: none;
   background: #000b1c;
   color: #ffffff;
-  // font-family: "Inter var", sans-serif;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 h1 {
@@ -45,3 +42,4 @@ svg {
   font-weight: bold;
   transform: translateX(-50%);
 }
+/*# sourceMappingURL=style.css.map */
