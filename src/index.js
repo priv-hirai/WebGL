@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import { Suspense } from 'react'
 import { Logo } from '@pmndrs/branding'
-import './styles.css'
+// import './styles.css'
 import './assets/style.scss'
-import { App } from './App'
+import { App } from './compenents/App'
 
 function Overlay() {
   return (
