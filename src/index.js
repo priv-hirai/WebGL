@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom'
 import { Suspense } from 'react'
 import { Logo } from '@pmndrs/branding'
-// import './styles.css'
 import './assets/scss/style.scss'
 import { App } from './compenents/App'
 
