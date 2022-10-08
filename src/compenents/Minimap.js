@@ -15,10 +15,6 @@ export function Minimap() {
   const { height } = useThree((state) => state.viewport)
   useFrame((state, delta) => {
     ref.current.children.forEach((child, index) => {
-      // Give me a value between 0 and 1
-      //   starting at the position of my item
-      //   ranging across 4 / total length
-      //   make it a sine, so the value goes from 0 to 1 to 0.
       const y = scroll.curve(index / urls.length - 1.5 / urls.length, 4 / urls.length)
       child.scale.y = damp(child.scale.y, 0.1 + y / 6, 8, delta)
     })
