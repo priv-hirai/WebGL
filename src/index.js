@@ -10,7 +10,7 @@ function Overlay() {
       <div style={{ position: 'absolute', top: 40, left: '50%'}} className="title">
         My pets
       </div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/17/2021</div>
+      {/* <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/17/2021</div> */}
     </div>
   )
 }
