@@ -1,5 +1,8 @@
 @use "system.scss" as *;
 @import url("https://rsms.me/inter/inter.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 * {
   box-sizing: border-box;
@@ -16,19 +19,9 @@ body,
 
 body {
   overscroll-behavior: none;
-  background: #C7B897;
+  background: #333333;
   color: #ffffff;
-  // font-family: "Inter var", sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-}
-
-h1 {
-  font-size: 30vw;
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.7em;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -37,15 +30,9 @@ a {
   text-decoration: none;
 }
 
-svg {
-  fill: #a0a0a0;
-}
-
 .title {
-  font-size: 60px;
-  font-weight: bold;
   transform: translateX(-50%);
-  @include MQ(md) {
-    font-size: 40px;
-  }
+  // @include MQ(md) {
+  //   font-size: 40px;
+  // }
 }
