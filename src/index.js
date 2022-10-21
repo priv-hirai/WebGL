@@ -8,7 +8,7 @@ function Overlay() {
   return (
     // pointer-events-none
     <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-      <div className="absolute top-[40px] left-[50%] translate-x-[-50%] font-bold text-4xl md:text-6xl">
+      <div className="absolute top-[80px] left-[50%] translate-x-[-50%] font-bold text-4xl md:text-6xl text-white">
         My gallery
       </div>
     </div>
