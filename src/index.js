@@ -1,22 +1,23 @@
 import ReactDOM from 'react-dom'
 import { Suspense } from 'react'
-import { Logo } from '@pmndrs/branding'
 import './assets/scss/style.scss'
 import { App } from './compenents/App'
+import { Header } from './compenents/header'
 
 function Overlay() {
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <div style={{ position: 'absolute', top: 40, left: '50%'}} className="title font-bold text-4xl md:text-6xl">
+    // pointer-events-none
+    <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+      <div className="absolute top-[80px] left-[50%] translate-x-[-50%] font-bold text-4xl md:text-6xl text-white">
         My gallery
       </div>
-      {/* <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>10/17/2021</div> */}
     </div>
   )
 }
 
 ReactDOM.render(
   <>
+    <Header />
     <Suspense fallback={null}>
       <App />
     </Suspense>

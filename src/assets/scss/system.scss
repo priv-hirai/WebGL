@@ -4,7 +4,7 @@ $breakpoint: 767;
 $contSpaceValue: 25;
 $innerContWidthValue: 1200;
 $contWidthValue: $innerContWidthValue + $contSpaceValue * 2;
-$contWidth: $contWidthValue + px;
+$contWidth: $contWidthValue;
 
 // Color
 // -------------------------------------------------------------------
@@ -17,6 +17,8 @@ $borderColor:#d4d7d3;
 $lightBlueColor:#DCF4F8;
 $darkBlueColor:rgba(215, 233, 236, 0.95);
 $aiColor:#004C71;
+$linkColor:#425052;
+$titleColor:#424242;
 
 // responsive system
 // ---------------------
@@ -46,9 +48,9 @@ $breakpoints: (
 // Layouts
 // -------------------------------------------------------------------
 @mixin contentCentering(){
-  max-width: $contWidth;
-  padding-right: $contSpaceValue + px;
-  padding-left: $contSpaceValue + px;
+  max-width: rem($contWidth);
+  padding-right: rem($contSpaceValue);
+  padding-left: rem($contSpaceValue);
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -56,3 +58,16 @@ $breakpoints: (
     max-width: 100%;
   }
 }
+
+// ---------------------
+// font-size
+// -------------------------------------------------------------------
+$baseFontSize: 16;
+@function rem($px) {
+  @return ($px / $baseFontSize) * 1rem;
+}
+
+// ---------------------
+// font-family
+// -------------------------------------------------------------------
+$font-hiragino:"Capriola", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
