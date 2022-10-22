@@ -1,0 +1,229 @@
+@use "system.scss" as *;
+
+.header {
+
+  &-bar {
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    width: 100%;
+    height: rem(70);
+    background-color: $baseColor;
+    opacity: 0.95;
+    transition: all .4s ease-in;
+
+    @include MQ(cont) {
+      border-bottom: solid rem(1) $borderColor;
+    }
+
+    @include MQ(md) {
+      height: 0;
+      top: rem(-60);
+    }
+  }
+
+  &-bar_active {
+    @include MQ(md) {
+      height: rem(60);
+      top: 0;
+      border-bottom: solid rem(1) $borderColor;
+    }
+  }
+
+  &-date {
+    height: rem(70);
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: rem(84);
+    padding-left: rem(12);
+    position: static;
+
+    @include MQ(md) {
+      height: rem(60);
+    }
+  }
+
+  &-year {
+    font-size: rem(25);;
+  }
+
+  &-month_day {
+    font-size: rem(48);
+    margin-left: rem(6);
+
+    @include MQ(md) {
+      font-size: rem(25);
+    }
+  }
+
+  &-hamburgerMenu {
+    width: rem(70);
+    height: rem(70);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background: $aiColor;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+
+    @include MQ(md) {
+      width: rem(60);
+      height: rem(60);
+    }
+
+    &:before {
+      position: absolute;
+      width: rem(22);
+      height: rem(2);
+      background: $baseColor;
+      transition: all .4s ease-in-out;
+      content: '';
+      top: rem(26);
+      right: rem(23);
+
+      @include MQ(md) {
+        top: rem(20);
+        right: rem(18);
+      }
+    }
+
+    span {
+      position: absolute;
+      width: rem(22);
+      height: rem(2);
+      background: $baseColor;
+      transition: all .4s ease-in-out;
+      top: rem(34);
+      right: rem(23);
+
+      @include MQ(md) {
+        top: rem(28);
+        right: rem(18);
+      }
+    }
+
+    &:after {
+      position: absolute;
+      width: rem(22);
+      height: rem(2);
+      background: $baseColor;
+      transition: all .4s ease-in-out;
+      content: '';
+      top: rem(42);
+      right: rem(23);
+
+      @include MQ(md) {
+        top: rem(36);
+        right: rem(18);
+      }
+    }
+  }
+
+  &-nav {
+    position: fixed;
+    z-index: 140;
+    top: rem(-1000);
+    left: 0;
+    width: 100%;
+    transition: all .4s ease-in-out;
+    overflow: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  &-navMenu {
+    background: $darkBlueColor;
+    padding: rem(15) 0 rem(40);
+  }
+
+  &-navMenu-list {
+    width: rem(415);
+    margin: 0 auto;
+
+    @include MQ(md) {
+      padding-left: rem(10);
+      padding-right: rem(10);
+      width: 100%;
+    }
+
+    a {
+      height: rem(70);
+      display: block;
+      border-bottom: rem(1) dotted #7F7F7F;
+      background-size: 100% auto;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: opacity .3s ease-in;
+      position: relative;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-overlay {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 110;
+    background: rgba(0, 0, 0, 0.49);
+  }
+
+  &-overlay_active {
+    height: 100%;
+  }
+
+  &-hide {
+    top: rem(-70);
+  }
+
+  &-hamburgerMenu_active {
+    &:before {
+      top: rem(33);
+      right: rem(21);
+      width: rem(27);
+      transform: rotate(-135deg);
+
+      @include MQ(md) {
+        top: rem(28);
+        right: rem(15);
+        width: rem(27);
+      }
+    }
+
+    span {
+      opacity: 0;
+    }
+
+    &:after {
+      top: rem(33);
+      right: rem(21);
+      width: rem(27);
+      transform: rotate(135deg);
+
+      @include MQ(md) {
+        top: rem(28);
+        right: rem(15);
+        width: rem(27);
+      }
+    }
+  }
+
+  &-navMenu_active {
+    top: rem(70);
+
+    @include MQ(md) {
+      top: rem(60);
+    }
+  }
+}
