@@ -58,7 +58,7 @@ export function Header() {
               <div className="header-navMenu">
                 <ul className="header-navMenu-list">
                   <li className="header-navMenu-item" onClick={expandMenu}>
-                    <a href="http://hirai.website/react/"><span>Top</span></a>
+                    <a href="http://hirai.website/hirai-react-portfolio/"><span>Top</span></a>
                   </li>
                 </ul>
               </div>
